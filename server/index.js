@@ -5,6 +5,7 @@ const bcrypt=require("bcrypt");
 const jwt=require("jsonwebtoken");
 const cookieParser=require("cookie-parser");
 const UserModel=require("./models/users");
+const EventData=require("./models/eventData");
 require("./db/conn");
 
 const app=express();
@@ -55,11 +56,25 @@ app.post("/login",(req,res)=>{
     })
 })
 
-app.post("/eventregisteration",async(req,res)=>{
-    const {name,email,password} = req.body;
-    const registered=await userData.save();
-    
-})
+app.post("/event-registration", (req, res) => {
+  const { name, age, email, contact, gender, event } = req.body;
+  const eventRegistration = new EventData({
+    name,
+    age,
+    email,
+    contact,
+    gender,
+    event,
+  });
+  eventRegistration.save()
+    .then(() => {
+      res.status(200).json({ message: "You have successfully registered" });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ message: "Error saving data to the database" });
+    });
+});
 
 app.listen(8000,()=>{
     console.log("Server Running on port 8000");

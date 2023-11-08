@@ -16,7 +16,11 @@ function Contact() {
             <h1>Address your uncertainties.</h1>
           </div>
           <div>
-            <form className="form">
+            <form
+              action="https://formspree.io/f/myyqvbwl"
+              method="POST"
+              className="form"
+            >
               <p className="contact-title">Contact us</p>
               <p className="message">
                 Feel free to reach out to us for any queries.
@@ -28,8 +32,9 @@ function Contact() {
                     placeholder=""
                     type="text"
                     className="input"
+                    name="Name"
                   />
-                  <span>Firstname</span>
+                  <span>Name</span>
                 </label>
 
                 <label>
@@ -38,6 +43,7 @@ function Contact() {
                     placeholder=""
                     type="number"
                     className="input"
+                    name="Mobile_no"
                   />
                   <span>Mobile no.</span>
                 </label>
@@ -49,6 +55,7 @@ function Contact() {
                   placeholder=""
                   type="email"
                   className="input"
+                  name="Email"
                 />
                 <span>Email</span>
               </label>
@@ -59,6 +66,7 @@ function Contact() {
                   placeholder=""
                   type="text"
                   className="input"
+                  name="Subject"
                 />
                 <span>Subject</span>
               </label>
@@ -68,11 +76,10 @@ function Contact() {
                   required=""
                   placeholder="Your Message"
                   className="input"
+                  name="Message"
                 />
               </label>
-              <a href="mailto: napoleangaming06@gmail.com">
               <button className="submit">Submit</button>
-              </a>
             </form>
           </div>
         </div>

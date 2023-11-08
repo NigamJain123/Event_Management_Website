@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { event_cards } from "../src/data";
+import { Link } from "react-router-dom"
 
 function Events() {
   const [search, setSearch] = useState("");
@@ -51,7 +52,9 @@ function Events() {
                         Date:<span> {val.date}</span>
                       </p>
                       <p>Registration Fee: {val.fee}</p>
+                      <Link to="/event-registration">
                       <button className="about-btn event-btn">Register</button>
+                      </Link>
                     </div>
                   </div>
                 </div>

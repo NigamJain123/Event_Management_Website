@@ -4,6 +4,11 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 /* LOGIN & SIGNUP */
 .login-container{
@@ -1091,4 +1096,52 @@ button:hover span {
     transform: scale(1.8);
     opacity: 0;
   }
+}
+
+/* EVENT REGISTRATION */
+
+.event-registration-home{
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("https://s.tmimgcdn.com/scr/800x500/250600/background-wave-water-blue-vector-design-v1_250615-original.jpg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.event-registration-home>form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  width: 25vw;
+  padding: 20px 15px;
+  gap: 1.5rem;
+}
+.event-registration-home>form>input{
+  width: 90%;
+  height: 40px;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.event-registration-home>form>select{
+  width: 90%;
+  height: 40px;
+}
+.event-gender{
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  margin-left: -77px;
+  gap: 0.8rem;
+}
+.event-select{
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  margin-left: -85px;
+  gap: 0.8rem;
 }

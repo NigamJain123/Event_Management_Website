@@ -7,6 +7,7 @@ import Events from "../components/Events";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
+import Register from "../components/Register";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Signup />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/event-registration" element={<Register />}></Route>
         </Routes>
       </BrowserRouter>
     </>
